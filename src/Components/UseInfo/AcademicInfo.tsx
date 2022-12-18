@@ -9,30 +9,27 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import useStyle from "../Style/DashboardStyle";
-import EmployeeFetchData from "../Constant/EmployeeFetchData";
 import NavBar from "../NabBar";
+import useStyle from "../Style/DashboardStyle";
 
- 
-function PersonalInfo(): JSX.Element {
-  EmployeeFetchData();
-
+function AcademicInfo() {
   const classes = useStyle();
   const { userId } = useParams();
-  const [personalInfoData, setPersonalInfoData] = useState<any>();
-  const personalInfo = useSelector((state:any) => state.employee.item);
+  const academicInfo = useSelector((state:any) => state.employee.item);
+  const [academicInfoData, setAcademicInfoData] = useState<any>();
 
-  useEffect(() => {
-    const employeePersonalInformation = personalInfo.find(
+  useEffect(()=>{
+    const employeeAcademicInformation = academicInfo.find(
       (item: any) => {      
         if (userId) {
           return item.id === parseInt(userId, 10);
         }
       }
     );
-    setPersonalInfoData(employeePersonalInformation);
-  }, [personalInfo]);
-  
+    setAcademicInfoData(employeeAcademicInformation);
+    
+  }, [academicInfo]);
+
   return (
     <div className={classes.tableContainer}>
       <NavBar />
@@ -40,22 +37,25 @@ function PersonalInfo(): JSX.Element {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Name</TableCell>
-              <TableCell> Birth Date </TableCell>
-              <TableCell> Occupation </TableCell>
+              <TableCell>College Name</TableCell>
+              <TableCell>Degree</TableCell>
+              <TableCell>Pass Out year</TableCell>
+              <TableCell>Address</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             <TableRow>
               <TableCell>
-                {personalInfoData?.personal?.name}
-                {/* {console.log(personalInfoData?.personal?.name, "naem")} */}
+                {academicInfoData?.academic?.collegeName}
               </TableCell>
               <TableCell>
-                {personalInfoData?.personal?.address}
+                {academicInfoData?.academic?.degree}
               </TableCell>
               <TableCell>
-                {personalInfoData?.personal?.phoneNo}
+                {academicInfoData?.academic?.passOut}
+              </TableCell>
+              <TableCell>
+                {academicInfoData?.academic?.address}
               </TableCell>
             </TableRow>
           </TableBody>
@@ -65,4 +65,4 @@ function PersonalInfo(): JSX.Element {
   );
 }
 
-export default PersonalInfo;
+export default AcademicInfo;
