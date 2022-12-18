@@ -4,7 +4,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import Store from "./redux/Store/Store";
 import PersonalInfo from "./Components/UseInfo/PersonalInfo";
-import EmployeeFetchData from "./Components/Constant/EmployeeFetchData";
+import ProfessionalInfo from "./Components/UseInfo/ProfesionalInfo";
+import AcademicInfo from "./Components/UseInfo/AcademicInfo";
+import EmploymentInfo from "./Components/UseInfo/EmploymentInfo";
 
 function App(): JSX.Element {
   // EmployeeFetchData ();
@@ -17,9 +19,9 @@ function App(): JSX.Element {
             <Route path="/*" element={<Dashboard />} />
             <Route path="users/:userId">
               <Route path="personal" element={<PersonalInfo />} />
-              {/* <Route path="professional" element={<ProfessionalInfo />} /> */}
-              {/* <Route path="academic" element={<AcademicInfo />} /> */}
-              {/* <Route path="employment" element={<EmploymentInfo />} /> */}
+              <Route path="professional" element={<ProfessionalInfo />} />
+              <Route path="academic" element={<AcademicInfo />} />
+              <Route path="employment" element={<EmploymentInfo />} />
             </Route>
           </Routes>
         </BrowserRouter>
