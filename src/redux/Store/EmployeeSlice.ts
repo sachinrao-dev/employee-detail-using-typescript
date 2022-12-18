@@ -8,14 +8,12 @@ const EmployeeSlice = createSlice({
   initialState,
   reducers: {
     employeeDetail: (state, action) => {
-      // console.log(state);
-      
       state.item = action.payload;
       console.log(action.payload , "payload");
       
     },
   },
 });
-export const employeeDetail = EmployeeSlice.actions;
+export const { employeeDetail } = EmployeeSlice.actions;
 export default EmployeeSlice.reducer;
 // export default EmployeeSlice;

@@ -63,3 +63,6 @@ const getDataFromApi = () => {
 };
 
 export default getDataFromApi;
+// export default async function getUserInfo(requestData: EmployeeData): Promise<EmployeeData> {
+//   return await request(userInfoApi, requestData, 'GET')
+// };

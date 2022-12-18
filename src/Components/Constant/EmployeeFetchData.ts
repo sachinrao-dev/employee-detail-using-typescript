@@ -12,7 +12,7 @@ function EmployeeFetchData() {
   useEffect(() => {
     getDataFromApi().then((employeeData) => {
       console.log(employeeData, "emp");
-      // disPatch(employeeDetail(employeeData));
+      disPatch(employeeDetail(employeeData));
     });
   }, []);
 }
