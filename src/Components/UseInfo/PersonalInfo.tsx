@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import useStyle from "../Style/DashboardStyle";
 import EmployeeFetchData from "../Constant/EmployeeFetchData";
+import NavBar from "../NabBar";
 
  
 function PersonalInfo(): JSX.Element {
@@ -35,6 +36,7 @@ function PersonalInfo(): JSX.Element {
   
   return (
     <div className={classes.tableContainer}>
+      <NavBar />
       <TableContainer>
         <Table>
           <TableHead>
