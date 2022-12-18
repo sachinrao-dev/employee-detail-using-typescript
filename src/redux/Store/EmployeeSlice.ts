@@ -9,11 +9,10 @@ const EmployeeSlice = createSlice({
   reducers: {
     employeeDetail: (state, action) => {
       state.item = action.payload;
-      console.log(action.payload , "payload");
+      console.log(action.payload, "payload");
       
     },
   },
 });
 export const { employeeDetail } = EmployeeSlice.actions;
 export default EmployeeSlice.reducer;
-// export default EmployeeSlice;

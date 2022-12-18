@@ -13,7 +13,7 @@ import {
 import useStyle from "../Style/DashboardStyle";
 
 function Dashboard(): JSX.Element {
-  EmployeeFetchData();
+  // EmployeeFetchData();
   const employee = useSelector((state: any) => state.employee);
   const classes = useStyle();
 
