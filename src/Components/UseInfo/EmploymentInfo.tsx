@@ -13,6 +13,7 @@ import NavBar from "../NabBar";
 import useStyle from "../Style/DashboardStyle";
 
 function EmploymentInfo() {
+  
   const classes = useStyle();
   const { userId } = useParams();
   const [employementlInfoData, setEmployementInfoData] = useState<any>();
@@ -37,7 +38,7 @@ function EmploymentInfo() {
             className={classes.navBar}
             to={`/users/${userId}/employment/alluserscompanies`}
           >
-                        Current company of all employees
+            Current company of all employees
           </NavLink>
         </div>
       </div>

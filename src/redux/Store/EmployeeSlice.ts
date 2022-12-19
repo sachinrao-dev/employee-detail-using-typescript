@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  item: [],
+  item:<any> [],
 };
 const EmployeeSlice = createSlice({
   name: "employee",
@@ -9,7 +9,7 @@ const EmployeeSlice = createSlice({
   reducers: {
     employeeDetail: (state, action) => {
       state.item = action.payload;
-      console.log(action.payload, "payload");
+      // console.log(action.payload, "payload");
       
     },
   },

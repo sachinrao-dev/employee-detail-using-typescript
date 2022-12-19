@@ -17,7 +17,6 @@ function AcademicInfo() {
   const { userId } = useParams();
   const academicInfo = useSelector((state:any) => state.employee.item);
   const [academicInfoData, setAcademicInfoData] = useState<any>();
-
   useEffect(()=>{
     const employeeAcademicInformation = academicInfo.find(
       (item: any) => {      
@@ -27,7 +26,6 @@ function AcademicInfo() {
       }
     );
     setAcademicInfoData(employeeAcademicInformation);
-    
   }, [academicInfo]);
 
   return (

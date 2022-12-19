@@ -1,6 +1,4 @@
-import React from "react";
 import { useSelector } from "react-redux";
-import EmployeeFetchData from "../Constant/EmployeeFetchData";
 import { Link } from "react-router-dom";
 import {
   Table,
@@ -13,10 +11,8 @@ import {
 import useStyle from "../Style/DashboardStyle";
 
 function Dashboard(): JSX.Element {
-  // EmployeeFetchData();
-  const employee = useSelector((state: any) => state.employee);
+  const employee = useSelector((state: any) => state.employee.item);
   const classes = useStyle();
-
   return (
     <div className={classes.tableContainer}>
       <div className={classes.allUser}>
@@ -32,7 +28,7 @@ function Dashboard(): JSX.Element {
             </TableRow>
           </TableHead>
           <TableBody>
-            {employee.item.map((item:any) => (
+            {employee.map((item:any) => (
               <TableRow key={item.id}>
                 <TableCell>
                   <Link to={`users/${item.id}/personal`}>{item.name}</Link>

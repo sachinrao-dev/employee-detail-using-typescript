@@ -15,13 +15,12 @@ import NavBar from "../NabBar";
 
  
 function PersonalInfo(): JSX.Element {
+  
   EmployeeFetchData();
-
   const classes = useStyle();
   const { userId } = useParams();
   const [personalInfoData, setPersonalInfoData] = useState<any>();
   const personalInfo = useSelector((state:any) => state.employee.item);
-
   useEffect(() => {
     const employeePersonalInformation = personalInfo.find(
       (item: any) => {      
