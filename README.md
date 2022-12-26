@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+## Project Description
+EmployeeDetail is Webpage Application made of using JavaScript's very popular library React - Js. It is having a nested route to show employee information.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technology Used :
 
-## Available Scripts
+- ReactJs : JavaScript's library React.js is used to develop the application.
+- JavaScript :  JavaScript's basics and some advanced concepts 
+- JSX : JavaScript XML is used to structure the page and using Different UI components inside React.js.
+- CSS : Cascading Style Sheet is used to style the page and make it more attractive and user's eye comfortable
+- MUI : Material ui 
+- TS : Javascript is dynamic type language , to convert into static type typescript takes place
 
-In the project directory, you can run:
+## What I've Learnt :
 
-### `npm start`
+I have Learnt :
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- A brief knowledge context api Hooks
+- In this project i learnt react-routing/nested routing using Id
+- In  this project i learnt typescript
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## you can see through this link
+[Here]( https://sachinrao-dev.github.io/employee-detail-using-typescript/)
 
-### `npm test`
+## Setup Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Get a clone of application from [Here](https://github.com/sachinrao-dev/employee-detail-using-typescript)
 
-### `npm run build`
+after that run this command
+## `cd employee-detail-using-typescript`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# `npm start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The page will reload when you make changes. You may also see any lint errors in the console.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Initial View of Application
+![Dashboard](https://drive.google.com/uc?export=view&id=1cOi0xy5WkmQz30ty9UVGePFx8kJ1kNSR)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+when click the name, then route to personal information
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Personal information view screen look like that
+![Personal](https://drive.google.com/uc?export=view&id=1zDZKBR_eqZMPHBnBaL8O0s7bhaus5SZA)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+when click tab Professional then route to the professional info of the employee
+## Professional information view screen look like that  
+![Professional](https://drive.google.com/uc?export=view&id=1emju5BT33VGt5HCcFsFX7LQkp2f6hzI1)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+click tab academic then route to the Academic info of the employee 
+![Academic](https://drive.google.com/uc?export=view&id=1icDb-enA0xqxEF8vopKPotZna_NnlylV)
 
-## Learn More
+click tab employment then route to the Employment info of the employee 
+![Employment](https://drive.google.com/uc?export=view&id=1wrezsG-bv9-srek8TVGWTn-CP0e2Rxb1)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+click tab All employee of the company then route to the all employee of the current company 
+![All-employee](https://drive.google.com/uc?export=view&id=17Lzivv-LX4zCfwbqRbTnhlu7PeVQwZxs)
