@@ -13,13 +13,40 @@ import NavBar from "../NabBar";
 import useStyle from "../Style/DashboardStyle";
 
 function ProfessionalInfo() {
+  interface EmployeeData {
+    id: number,
+    name: string,
+    dateOfBirth: string,
+    occupation: string,
+    personal: {
+        name: string,
+        address: string,
+        phoneNo: number,
+    },
+    professional: { experiences: string },
+    academic: {
+        collegeName: string,
+        degree: string,
+        passOut: string,
+        address: string,
+    },
+    employment: {
+        currentCompany: string,
+        employmentHistory: [
+            {
+                employer: string,
+                year: number,
+            },
+        ],
+    },
+}
   const classes = useStyle();
   const { userId } = useParams();
-  const [professionalInfoData, setProfessionalInfoData] = useState<any>();
-  const professionalInfo = useSelector((state: any) => state.employee.item);
+  const [professionalInfoData, setProfessionalInfoData] = useState<EmployeeData>();
+  const professionalInfo = useSelector((state: EmployeeData | any) => state.employee.item);
   useEffect(() => {
     const employeeProfessionalInfo = professionalInfo.find(
-      (item: any) => {
+      (item: EmployeeData) => {
         if (userId) {
           return item.id === parseInt(userId, 10);
         }

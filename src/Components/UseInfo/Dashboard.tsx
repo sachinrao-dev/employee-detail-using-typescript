@@ -11,7 +11,34 @@ import {
 import useStyle from "../Style/DashboardStyle";
 
 function Dashboard(): JSX.Element {
-  const employee = useSelector((state: any) => state.employee.item);
+  interface EmployeeData {
+    id: number,
+    name: string,
+    dateOfBirth: string,
+    occupation: string,
+    personal: {
+        name: string,
+        address: string,
+        phoneNo: number,
+    },
+    professional: { experiences: string },
+    academic: {
+        collegeName: string,
+        degree: string,
+        passOut: string,
+        address: string,
+    },
+    employment: {
+        currentCompany: string,
+        employmentHistory: [
+            {
+                employer: string,
+                year: number,
+            },
+        ],
+    },
+}
+  const employee = useSelector((state: EmployeeData | any) => state.employee.item);
   const classes = useStyle();
   return (
     <div className={classes.tableContainer}>
@@ -28,7 +55,7 @@ function Dashboard(): JSX.Element {
             </TableRow>
           </TableHead>
           <TableBody>
-            {employee.map((item:any) => (
+            {employee.map((item:EmployeeData) => (
               <TableRow key={item.id}>
                 <TableCell>
                   <Link to={`users/${item.id}/personal`}>{item.name}</Link>

@@ -2,7 +2,9 @@
   "name": "employee-detail-typescript",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sachinrao-dev.github.io/employee-detail-using-typescript",
   "dependencies": {
+    "-": "^0.0.1",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.10.15",
@@ -14,11 +16,13 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/react-router-dom": "^5.3.3",
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
+    "save-dev": "^0.0.1-security",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -28,7 +32,9 @@
     "eject": "react-scripts eject",
     "format": "prettier --write",
     "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

@@ -15,15 +15,41 @@ import NavBar from "../NabBar";
 
  
 function PersonalInfo(): JSX.Element {
-  
+  interface EmployeeData {
+    id: number,
+    name: string,
+    dateOfBirth: string,
+    occupation: string,
+    personal: {
+        name: string,
+        address: string,
+        phoneNo: number,
+    },
+    professional: { experiences: string },
+    academic: {
+        collegeName: string,
+        degree: string,
+        passOut: string,
+        address: string,
+    },
+    employment: {
+        currentCompany: string,
+        employmentHistory: [
+            {
+                employer: string,
+                year: number,
+            },
+        ],
+    },
+}  
   EmployeeFetchData();
   const classes = useStyle();
   const { userId } = useParams();
-  const [personalInfoData, setPersonalInfoData] = useState<any>();
-  const personalInfo = useSelector((state:any) => state.employee.item);
+  const [personalInfoData, setPersonalInfoData] = useState<EmployeeData>();
+  const personalInfo = useSelector((state:EmployeeData | any) => state.employee.item);
   useEffect(() => {
     const employeePersonalInformation = personalInfo.find(
-      (item: any) => {      
+      (item: EmployeeData) => {      
         if (userId) {
           return item.id === parseInt(userId, 10);
         }
@@ -48,7 +74,6 @@ function PersonalInfo(): JSX.Element {
             <TableRow>
               <TableCell>
                 {personalInfoData?.personal?.name}
-                {/* {console.log(personalInfoData?.personal?.name, "naem")} */}
               </TableCell>
               <TableCell>
                 {personalInfoData?.personal?.address}

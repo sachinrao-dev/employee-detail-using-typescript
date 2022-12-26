@@ -56,6 +56,33 @@ const getDataFromApi = () => {
           ],
         },
       },
+      {
+        id: 2,
+        name: "Robert",
+        dateOfBirth: "22/02/2022",
+        occupation: "developer",
+        personal: {
+          name: "john",
+          address: "Delhi",
+          phoneNo: 1234341,
+        },
+        professional: { experiences: "3 years" },
+        academic: {
+          collegeName: "Sms ",
+          degree: "B.Tech",
+          passOut: "2022-06-22",
+          address: "Lucknow",
+        },
+        employment: {
+          currentCompany: "Celestial",
+          employmentHistory: [
+            {
+              employer: "Google",
+              year: 2019,
+            },
+          ],
+        },
+      },
     ];
     resolve(employee);
   });

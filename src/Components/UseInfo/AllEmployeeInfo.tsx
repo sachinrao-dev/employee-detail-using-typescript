@@ -11,8 +11,35 @@ import NavBar from "../NabBar";
 import useStyle from "../Style/DashboardStyle";
 
 function AllEmployeeInfo() {
+  interface EmployeeData {
+    id: number,
+    name: string,
+    dateOfBirth: string,
+    occupation: string,
+    personal: {
+        name: string,
+        address: string,
+        phoneNo: number,
+    },
+    professional: { experiences: string },
+    academic: {
+        collegeName: string,
+        degree: string,
+        passOut: string,
+        address: string,
+    },
+    employment: {
+        currentCompany: string,
+        employmentHistory: [
+            {
+                employer: string,
+                year: number,
+            },
+        ],
+    },
+}
   const classes = useStyle();
-  const allEmployeeDataInfo = useSelector((state: any) => state.employee.item);
+  const allEmployeeDataInfo = useSelector((state: EmployeeData | any) => state.employee.item);
   return (
     <div className={classes.tableContainer}>
       <NavBar />
@@ -25,7 +52,7 @@ function AllEmployeeInfo() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {allEmployeeDataInfo.map((item:any) => (
+            {allEmployeeDataInfo.map((item:EmployeeData) => (
               <TableRow>
                 <TableCell>{item.name}</TableCell>
                 <TableCell>{item.employment.currentCompany}</TableCell>
