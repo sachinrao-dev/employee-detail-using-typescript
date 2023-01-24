@@ -1,5 +1,5 @@
 ## Project Description
-EmployeeDetail is Webpage Application made of using JavaScript's very popular library React - Js. It is having a nested route to show employee information.
+EmployeeDetail is Webpage Application made of using JavaScript's very popular library React - Js, and TypeScript. It is having a nested route to show employee information.
 
 ## Technology Used :
 
@@ -8,7 +8,7 @@ EmployeeDetail is Webpage Application made of using JavaScript's very popular li
 - JSX : JavaScript XML is used to structure the page and using Different UI components inside React.js.
 - CSS : Cascading Style Sheet is used to style the page and make it more attractive and user's eye comfortable
 - MUI : Material ui 
-- TS : Javascript is dynamic type language , to convert into static type typescript takes place
+- TS : TypeScript is dynamic type language , to convert into static type typescript takes place
 
 ## What I've Learnt :
 
